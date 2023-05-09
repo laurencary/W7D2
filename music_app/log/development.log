@@ -1284,3 +1284,890 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 15ms (Views: 6.3ms | ActiveRecord: 0.6ms | Allocations: 4658)
 
 
+Started GET "/users/1" for ::1 at 2023-05-09 14:33:48 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 131)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 2841)
+Completed 200 OK in 27ms (Views: 7.7ms | ActiveRecord: 6.4ms | Allocations: 10634)
+
+
+Started GET "/bands" for ::1 at 2023-05-09 14:33:52 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (1.1ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 2673)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 4927)
+Completed 200 OK in 31ms (Views: 19.8ms | ActiveRecord: 8.1ms | Allocations: 6072)
+
+
+Started GET "/bands" for ::1 at 2023-05-09 14:34:35 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 613)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 3986)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 1.1ms | Allocations: 4206)
+
+
+Started GET "/bands" for ::1 at 2023-05-09 14:34:55 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 613)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 3899)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.9ms | Allocations: 4100)
+
+
+Started GET "/bands/3" for ::1 at 2023-05-09 14:38:54 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 96)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2615)
+Completed 200 OK in 14ms (Views: 8.9ms | ActiveRecord: 0.8ms | Allocations: 4746)
+
+
+Started GET "/bands" for ::1 at 2023-05-09 14:39:02 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 778)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 2676)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.8ms | Allocations: 2950)
+
+
+Started GET "/bands/3" for ::1 at 2023-05-09 14:40:28 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.7ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1597)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1686)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms | Allocations: 2863)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= render 'shared/band' @band=band %>:
+
+Started POST "/__better_errors/b347ceea36aa31d0/variables" for ::1 at 2023-05-09 14:40:28 -0700
+Started GET "/bands/3" for ::1 at 2023-05-09 14:41:37 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1574)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1663)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms | Allocations: 2905)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= render 'band' band: @band %>:
+
+Started POST "/__better_errors/6c954ca1ef8c6ef9/variables" for ::1 at 2023-05-09 14:41:37 -0700
+Started GET "/bands/3" for ::1 at 2023-05-09 14:41:38 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1537)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1617)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 2376)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= render 'band' band: @band %>:
+
+Started POST "/__better_errors/8d778f641fc6fe2e/variables" for ::1 at 2023-05-09 14:41:38 -0700
+Started GET "/bands/3" for ::1 at 2023-05-09 14:41:38 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1533)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1613)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms | Allocations: 2291)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= render 'band' band: @band %>:
+
+Started POST "/__better_errors/83d346b7527839a7/variables" for ::1 at 2023-05-09 14:41:39 -0700
+Started GET "/bands/3" for ::1 at 2023-05-09 14:41:49 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (1.0ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1574)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1663)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.0ms | Allocations: 2825)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= render 'band' band: @band %>:
+
+Started POST "/__better_errors/df52e4330dedf43f/variables" for ::1 at 2023-05-09 14:41:50 -0700
+Started GET "/bands/3" for ::1 at 2023-05-09 14:41:50 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1535)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1615)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 2373)
+
+
+
+ActionView::SyntaxErrorInTemplate - Encountered a syntax error while rendering template: check <%= render 'band' band: @band %>:
+
+Started POST "/__better_errors/66cff639b6f78ccb/variables" for ::1 at 2023-05-09 14:41:50 -0700
+Started GET "/bands/3" for ::1 at 2023-05-09 14:41:56 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 7.4ms | Allocations: 5579)
+  Rendered bands/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 5814)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5899)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms | Allocations: 7060)
+
+
+
+NameError - undefined local variable or method `band' for #<ActionView::Base:0x00000000013b00>
+Did you mean?  @band
+               and:
+  app/views/bands/_band.html.erb:1
+  app/views/bands/show.html.erb:1
+
+Started POST "/__better_errors/e4367fe1597c3602/variables" for ::1 at 2023-05-09 14:41:56 -0700
+Started GET "/bands/3" for ::1 at 2023-05-09 14:41:58 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 7.7ms | Allocations: 5421)
+  Rendered bands/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 5483)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5562)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms | Allocations: 6319)
+
+
+
+NameError - undefined local variable or method `band' for #<ActionView::Base:0x00000000013ba0>
+Did you mean?  @band
+               and:
+  app/views/bands/_band.html.erb:1
+  app/views/bands/show.html.erb:1
+
+Started POST "/__better_errors/4bfc691f37c3b643/variables" for ::1 at 2023-05-09 14:41:58 -0700
+Started GET "/bands/3" for ::1 at 2023-05-09 14:42:22 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.6ms | Allocations: 102)
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 338)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2874)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.7ms | Allocations: 4047)
+
+
+Started GET "/bands/3" for ::1 at 2023-05-09 14:42:43 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.8ms | Allocations: 93)
+  Rendered bands/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 324)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2827)
+Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.9ms | Allocations: 4020)
+
+
+Started GET "/bands/" for ::1 at 2023-05-09 14:42:46 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 3.9ms | Allocations: 2976)
+  Rendered bands/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3803)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3882)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 4146)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/bands/_band.html.erb:1
+  app/views/bands/index.html.erb:5
+  app/views/bands/index.html.erb:4
+  app/controllers/bands_controller.rb:6:in `index'
+
+Started POST "/__better_errors/c925a8ae574b4714/variables" for ::1 at 2023-05-09 14:42:46 -0700
+Started GET "/bands/" for ::1 at 2023-05-09 14:42:49 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 2.8ms | Allocations: 2950)
+  Rendered bands/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3608)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 3687)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.4ms | Allocations: 3872)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/bands/_band.html.erb:1
+  app/views/bands/index.html.erb:5
+  app/views/bands/index.html.erb:4
+  app/controllers/bands_controller.rb:6:in `index'
+
+Started POST "/__better_errors/a7180324df98a6bb/variables" for ::1 at 2023-05-09 14:42:49 -0700
+Started GET "/bands/" for ::1 at 2023-05-09 14:43:48 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 0.6ms | Allocations: 96)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.2ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 1326)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 3787)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.8ms | Allocations: 4468)
+
+
+Started GET "/bands/3/edit" for ::1 at 2023-05-09 14:46:30 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.8ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 153)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 2062)
+Completed 200 OK in 35ms (Views: 11.2ms | ActiveRecord: 1.2ms | Allocations: 2828)
+
+
+Started PATCH "/bands" for ::1 at 2023-05-09 14:46:35 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/bands"):
+  
+Started PATCH "/bands" for ::1 at 2023-05-09 14:47:14 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/bands"):
+  
+Started GET "/bands" for ::1 at 2023-05-09 14:47:18 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 0.7ms | Allocations: 93)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1322)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3795)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 1.1ms | Allocations: 4438)
+
+
+Started GET "/bands/3/edit" for ::1 at 2023-05-09 14:47:24 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 12.5ms | Allocations: 5210)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5289)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 6044)
+
+
+
+NameError - undefined local variable or method `edit_band' for #<ActionView::Base:0x00000000014348>
+Did you mean?  edit_band_url:
+  app/views/bands/edit.html.erb:3
+
+Started POST "/__better_errors/c58a71e708afbc41/variables" for ::1 at 2023-05-09 14:47:24 -0700
+Started GET "/bands/3/edit" for ::1 at 2023-05-09 14:47:33 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 281)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2771)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 1.0ms | Allocations: 3941)
+
+
+Started PATCH "/bands/3/edit" for ::1 at 2023-05-09 14:47:34 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/bands/3/edit"):
+  
+Started GET "/bands/3/edit" for ::1 at 2023-05-09 14:48:11 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 203)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 2686)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 0.9ms | Allocations: 3875)
+
+
+Started PATCH "/bands" for ::1 at 2023-05-09 14:48:12 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/bands"):
+  
+Started GET "/bands" for ::1 at 2023-05-09 14:51:06 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 0.5ms | Allocations: 93)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1322)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 3783)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.7ms | Allocations: 4483)
+
+
+Started GET "/bands/1/edit" for ::1 at 2023-05-09 14:51:16 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 186)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2104)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.7ms | Allocations: 2870)
+
+
+Started PATCH "/bands.1" for ::1 at 2023-05-09 14:51:19 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/bands.1"):
+  
+Started GET "/bands" for ::1 at 2023-05-09 14:53:59 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 0.3ms | Allocations: 93)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1322)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 3792)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 4477)
+
+
+Started GET "/bands/2/edit" for ::1 at 2023-05-09 14:54:09 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 158)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2058)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.6ms | Allocations: 2823)
+
+
+Started PATCH "/bands/2" for ::1 at 2023-05-09 14:54:11 -0700
+Processing by BandsController#update as HTML
+  Parameters: {"band"=>{"name"=>"Justin Bieber"}, "id"=>"2"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms | Allocations: 595)
+
+
+
+ArgumentError - wrong number of arguments (given 0, expected 1):
+  app/controllers/bands_controller.rb:48:in `band_params'
+  app/controllers/bands_controller.rb:32:in `update'
+
+Started POST "/__better_errors/b3faf7d06b462bf1/variables" for ::1 at 2023-05-09 14:54:11 -0700
+Started PATCH "/bands/2" for ::1 at 2023-05-09 14:54:46 -0700
+Processing by BandsController#update as HTML
+  Parameters: {"band"=>{"name"=>"Justin Bieber"}, "id"=>"2"}
+  [1m[36mBand Load (0.2ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:32:in `update'
+  [1m[36mBand Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 AND "bands"."id" != $2 LIMIT $3[0m  [["name", "Justin Bieber"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:32:in `update'
+Redirected to http://localhost:3000/bands/2
+Completed 302 Found in 14ms (ActiveRecord: 3.2ms | Allocations: 6216)
+
+
+Started GET "/bands/2" for ::1 at 2023-05-09 14:54:46 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered bands/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 198)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 5070)
+Completed 200 OK in 21ms (Views: 9.8ms | ActiveRecord: 9.0ms | Allocations: 6125)
+
+
+Started GET "/bands/2/edit" for ::1 at 2023-05-09 14:57:38 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 1.7ms | Allocations: 257)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 2737)
+Completed 200 OK in 15ms (Views: 10.4ms | ActiveRecord: 0.6ms | Allocations: 3956)
+
+
+Started GET "/bands/2/edit" for ::1 at 2023-05-09 14:57:55 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 0.9ms | Allocations: 257)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2740)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.8ms | Allocations: 3934)
+
+
+Started DELETE "/bands/2" for ::1 at 2023-05-09 14:58:15 -0700
+Processing by BandsController#destroy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:41:in `destroy'
+  [1m[36mBand Destroy (0.7ms)[0m  [1m[31mDELETE FROM "bands" WHERE "bands"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/bands_controller.rb:41:in `destroy'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:41:in `destroy'
+Redirected to http://localhost:3000/bands
+Completed 302 Found in 10ms (ActiveRecord: 2.5ms | Allocations: 2179)
+
+
+Started GET "/bands" for ::1 at 2023-05-09 14:58:15 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 0.5ms | Allocations: 93)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1265)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3738)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.7ms | Allocations: 4441)
+
+
+Started GET "/bands" for ::1 at 2023-05-09 14:59:49 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 0.5ms | Allocations: 93)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1324)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3764)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.8ms | Allocations: 4464)
+
+
+Started GET "/bands" for ::1 at 2023-05-09 15:00:01 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 0.7ms | Allocations: 93)
+  Rendered bands/_band.html.erb (Duration: 0.2ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1321)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3755)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.8ms | Allocations: 4455)
+
+
+Started GET "/bands/new" for ::1 at 2023-05-09 15:00:06 -0700
+Processing by BandsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 70)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 1997)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 2284)
+
+
+Started GET "/bands/new" for ::1 at 2023-05-09 15:02:08 -0700
+Processing by BandsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 187)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2691)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 3373)
+
+
+Started GET "/bands/new" for ::1 at 2023-05-09 15:02:17 -0700
+Processing by BandsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 186)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2699)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 3403)
+
+
+Started GET "/bands/new" for ::1 at 2023-05-09 15:02:27 -0700
+Processing by BandsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 187)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 2691)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 3396)
+
+
+Started POST "/bands" for ::1 at 2023-05-09 15:02:43 -0700
+Processing by BandsController#create as HTML
+  Parameters: {"name"=>"Nicki Minaj"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 644)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: band:
+  app/controllers/bands_controller.rb:48:in `band_params'
+  app/controllers/bands_controller.rb:18:in `create'
+
+Started POST "/__better_errors/4eedace184a40627/variables" for ::1 at 2023-05-09 15:02:43 -0700
+Started POST "/bands" for ::1 at 2023-05-09 15:02:55 -0700
+Processing by BandsController#create as HTML
+  Parameters: {"name"=>"Nicki Minaj"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 597)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: band:
+  app/controllers/bands_controller.rb:48:in `band_params'
+  app/controllers/bands_controller.rb:18:in `create'
+
+Started POST "/__better_errors/b0ad99dd103863a1/variables" for ::1 at 2023-05-09 15:02:55 -0700
+Started GET "/bands" for ::1 at 2023-05-09 15:02:57 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 0.6ms | Allocations: 93)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/index.html.erb within layouts/application (Duration: 23.2ms | Allocations: 1324)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 3770)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.7ms | Allocations: 4471)
+
+
+Started GET "/bands/new" for ::1 at 2023-05-09 15:02:58 -0700
+Processing by BandsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/new.html.erb within layouts/application
+  Rendered bands/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 136)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2052)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 2329)
+
+
+Started POST "/bands" for ::1 at 2023-05-09 15:03:03 -0700
+Processing by BandsController#create as HTML
+  Parameters: {"band"=>{"name"=>"Nicki Minaj"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:20:in `create'
+  [1m[36mBand Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 LIMIT $2[0m  [["name", "Nicki Minaj"], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:20:in `create'
+  [1m[36mBand Create (0.6ms)[0m  [1m[32mINSERT INTO "bands" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Nicki Minaj"], ["created_at", "2023-05-09 22:03:03.909756"], ["updated_at", "2023-05-09 22:03:03.909756"]]
+  ↳ app/controllers/bands_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:20:in `create'
+Redirected to http://localhost:3000/bands/6
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms | Allocations: 2868)
+
+
+Started GET "/bands/6" for ::1 at 2023-05-09 15:03:03 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered bands/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 150)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2052)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.6ms | Allocations: 2801)
+
+
+Started GET "/bands/6" for ::1 at 2023-05-09 15:04:50 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.6ms | Allocations: 93)
+  Rendered bands/show.html.erb within layouts/application (Duration: 13.3ms | Allocations: 5201)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 5286)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms | Allocations: 6442)
+
+
+
+NoMethodError - undefined method `edit_band' for #<ActionView::Base:0x00000000016620>
+Did you mean?  edit_band_url:
+  app/views/bands/show.html.erb:3
+
+Started POST "/__better_errors/ca60de43b9adf78f/variables" for ::1 at 2023-05-09 15:04:50 -0700
+Started GET "/bands/6" for ::1 at 2023-05-09 15:05:02 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.4ms | Allocations: 93)
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 409)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 2886)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.7ms | Allocations: 4139)
+
+
+Started GET "/bands/6" for ::1 at 2023-05-09 15:05:08 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.4ms | Allocations: 93)
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 408)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2900)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.5ms | Allocations: 4093)
+
+
+Started GET "/bands/6/edit" for ::1 at 2023-05-09 15:05:10 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBand Load (0.5ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 198)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 2100)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.8ms | Allocations: 2868)
+
+
+Started GET "/bands/6" for ::1 at 2023-05-09 15:05:20 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.5ms | Allocations: 93)
+  Rendered bands/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 414)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2907)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.7ms | Allocations: 4079)
+
+
+Started GET "/bands/6/edit" for ::1 at 2023-05-09 15:05:41 -0700
+Processing by BandsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBand Load (0.3ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/edit.html.erb within layouts/application
+  Rendered bands/edit.html.erb within layouts/application (Duration: 0.9ms | Allocations: 255)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2753)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.7ms | Allocations: 3947)
+
+
+Started PATCH "/bands/6" for ::1 at 2023-05-09 15:05:45 -0700
+Processing by BandsController#update as HTML
+  Parameters: {"band"=>{"name"=>"Nicki Minaj"}, "id"=>"6"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bands_controller.rb:32:in `update'
+  [1m[36mBand Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "bands" WHERE "bands"."name" = $1 AND "bands"."id" != $2 LIMIT $3[0m  [["name", "Nicki Minaj"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bands_controller.rb:32:in `update'
+Redirected to http://localhost:3000/bands/6
+Completed 302 Found in 11ms (ActiveRecord: 1.7ms | Allocations: 2803)
+
+
+Started GET "/bands/6" for ::1 at 2023-05-09 15:05:45 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBand Load (0.4ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.5ms | Allocations: 89)
+  Rendered bands/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 350)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2244)
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.7ms | Allocations: 3005)
+
+
+Started GET "/bands/6" for ::1 at 2023-05-09 15:06:13 -0700
+Processing by BandsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands" WHERE "bands"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/bands_controller.rb:52:in `set_band'
+  Rendering layout layouts/application.html.erb
+  Rendering bands/show.html.erb within layouts/application
+  Rendered bands/_band.html.erb (Duration: 0.4ms | Allocations: 93)
+  Rendered bands/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 451)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2925)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 1.0ms | Allocations: 4097)
+
+
+Started GET "/bands" for ::1 at 2023-05-09 15:06:19 -0700
+Processing by BandsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering bands/index.html.erb within layouts/application
+  [1m[36mBand Load (0.6ms)[0m  [1m[34mSELECT "bands".* FROM "bands"[0m
+  ↳ app/views/bands/index.html.erb:4
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 11)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/_band.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered bands/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1136)
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6:in `current_user'
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 3046)
+Completed 200 OK in 26ms (Views: 16.8ms | ActiveRecord: 8.4ms | Allocations: 3320)
+
+

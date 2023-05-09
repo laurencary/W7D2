@@ -1,1 +1,15 @@
+<h2>Edit or Remove a band</h2>
 
+<form action="<%= band_url(@band) %>" method="POST">
+    <input type="hidden" name="_method" value="PATCH">
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" name="band[name]" value="<%= @band.name %>" >
+    </div>
+    <input type="submit" value="Update Band">
+</form>
+
+<form action="<%= band_url(@band) %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Remove">
+</form>

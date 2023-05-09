@@ -13,3 +13,44 @@
  *= require_tree .
  *= require_self
  */
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkslateblue;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a {
+    background-color: lightgray;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form {
+    display: table;
+}
+
+div {
+    display: table-row;
+}
+
+label {
+    display: table-cell;
+}
+
+input {
+    display: table-cell;
+}
+
+body {
+    background-color: lightsteelblue;
+}

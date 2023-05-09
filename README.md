@@ -1,119 +1,115 @@
-# First Routes & Controllers
+# Music App
 
-In this project you'll start playing with Rails routing.
+**[Live Demo!][live-demo]**
 
-## Learning Goals
+Today you're going to build an inventory system for record labels. This app will
+let the labels track their `Band`s, `Album`s, and `Track`s. Additionally, you'll
+offer user accounts so users can comment on the inventory.
 
-- Be able to create routes in __config/routes.rb__
-- Be able to read and understand Rails server error messages
-- Know the three places that `params` come from
-- Be able to nest query parameters
-- Be able to write controller actions that read from and write to the database
-- Know how and when to render errors
+[live-demo]: https://aa-music-app.herokuapp.com
 
-## Rails Diagram
+## Learning goals
 
-As you work through the project, revisit this diagram at each phase and discuss
-with your pair how the code you've written so far fits into the relationships
-displayed here.
+By the end of this project, you should be able to
 
-- ![Rails Diagram][diagram]
+- Build User Auth without looking at old code or demos
+- Nest routes
+- Link between different views using `a` tags and Rails URL helpers
+- Trigger controller actions from views using forms and links
+- Check that a current user exists before displaying content
 
-## Phase 0: Setup
+**Throughout this project, do not use `form_with`.**
 
-To start, generate a new, blank Rails project: `rails new <project_name>
-<flags>`. Don't forget to add flags to:
+## Warm up: Authentication
 
-1. Set PostgreSQL as the database,
-2. Skip setting up the project as a Git repo,
-3. Skip setting up the Rails testing framework, and
-4. Install a minimal build.
+Create a new Rails application and do any initial setup needed to get it ready
+to go. (If you have forgotten the basic steps for setting up a Rails app, look
+at the instructions for one of your past projects.) Use `postgresql` for your
+database. You can grab __.gitattributes__ and __.gitignore__ files from one of
+your past projects or the repo at the `Download Project` button below.
 
-Grab the __.gitignore__ and __.gitattributes__ files from the starter repo at
-the `Download Project` button below and copy them into the root directory of
-your project.
+Create a `User` model and bake in the prerequisites of authentication. Use email
+addresses in lieu of usernames; in a bonus phase, you'll use the email addresses
+to send confirmation emails and other spam.
 
-If you prefer to use `byebug` instead of `debug` as your debugger, then replace
-`debug` with `byebug` in your Gemfile. Add any other gems you want to install
-(e.g., `annotate`, `pry-rails`, `better_errors`, and `binding_of_caller`).  If
-you make any changes to your Gemfile, run `bundle install` to incorporate them
-into your project.
+See if you can build auth without looking back at any old code or demos. Here's
+a rough guide if you get stuck:
 
-Next, set up your Postgres database by running `rails db:create`.
+In the `users` table, you'll want to store an `email`, `password_digest`, and
+`session_token`. Make sure to add database constraints (require all fields) and
+indexes to ensure uniqueness of `email`s and speed up the lookup by
+`session_token`.
 
-By default, Rails protects against a type of attack known as Cross-Site Request
-Forgery (CSRF) by checking that non-GET requests include a valid _authenticity
-token_. Don't worry about that for now. For this particular assignment, go to
-__config/application.rb__. Right after the `config.load_defaults X.X` line, add:
+- Write methods to deal with the session token:
+  `User#generate_unique_session_token`, `User#reset_session_token!` and
+  `User#ensure_session_token`.
+- Write a `User#password=(password)` method which actually sets the
+  `password_digest` attribute using [BCrypt][bcrypt-documentation], and a
+  `User#is_password?(password)` method to check the users' password when they
+  log in.
 
-```rb
-config.action_controller.default_protect_from_forgery = false
+  > **N.B.**: Be careful setting instance variables in Active Record. You can't
+  > just set `@password_digest`. Instead, use `self.password_digest =` in
+  > `#password=`. (`self.___ =` calls an Active Record setter method that
+  > updates the state saved by `self.save`; `@___ =` makes a new instance
+  > variable unrelated to `self.save`.)
+
+- Remember that in the `User` model, you'll want to use a `before_validation`
+  [callback] to set the `session_token` before validation if it's not present.
+- Write a `User::find_by_credentials(email, password)` method.
+
+Next write a `UsersController` and `SessionsController`.
+
+- Write methods on the `UsersController` to allow new users to sign up.
+  - Users should be logged in immediately after they sign up.
+- Create a `SessionsController` but no `Session` model.
+  - Write controller methods and the accompanying routes so that users can log
+    in and log out. Should session be a singular resource?
+  - `SessionsController#create` should reset the appropriate user's
+    `session_token` and `session[:session_token]`.
+  - For now just redirect them to a `UsersController#show` page which simply
+    displays that user's email.
+
+Finally, take some time to refactor out shared code and add some convenience
+methods to `ApplicationController`. Make sure to include the appropriate methods
+in your views as helper methods (e.g., `helper_method :current_user`). At a
+minimum, you'll probably want to define the following methods:
+
+- `#current_user` to return the current user.
+- `#logged_in?` to return a boolean indicating whether anyone is signed in.
+- `#login!(user)` reset the `user`s session token and cookie
+
+### Routes summary
+
+Your app should have routes for:
+
+```sh
+    session POST   /session(.:format)                     sessions#create
+            DELETE /session(.:format)                     sessions#destroy
+new_session GET    /session/new(.:format)                 sessions#new
+      users POST   /users(.:format)                       users#create
+   new_user GET    /users/new(.:format)                   users#new
+       user GET    /users/:id(.:format)                   users#show
 ```
 
-Adding this line ensures that you won't need to include an authenticity token in
-your `POST` request params; you'll learn what that means later. (Once you know
-how to add authenticity tokens to your requests, you won't need to add this line
-to your projects.)
+Create log-in/sign-up views and edit the __application.html.erb__ layout so that
+a logged-in user is shown a "sign-out" button and a logged-out user is shown
+links to sign-up or sign-in pages.
 
-## Phase I: First routes
+### Styling
 
-You're now ready to generate your first routes! Go to __config/routes.rb__ and
-add the following line inside the `Rails.application.routes.draw` block:
+Spend a few minutes adding some styling to your session forms.
 
-```ruby
-resources :users
-```
+- Add a `Music App` header with a snazzy font to `application.html.erb`.
+- Use `flex` to display your logged-in or logged-out info on the right-hand side
+  of your `Music App` header.
+- Default link styling is pretty ugly. While keeping your `<a>` tags, make your
+  links look more like buttons by using `background-color` and `border-radius`.
+- Improve your session forms by changing the spacing and alignment of their
+  elements.
 
-Remember that this one line actually generates **eight routes** for you. Run
-`rails routes` to see what those routes are.
+Great job setting up authentication! Now on to Phase I, where you will start
+implementing elements specific to your music inventory app.
 
-Woohoo! You've set up your first eight _API endpoints_. Each route you have is
-an API endpoint, which encapsulates a single action your app can take.
-
-Look again at the left-most column, which displays the prefix for a route. Rails
-uses these prefixes to generate the helper methods `<prefix>_path` and
-`<prefix>_url` that you can use in your code to generate a route's path and url,
-respectively. In addition to making your code more readable, these methods also
-make it easier to maintain your code: if a route changes, the helper methods
-will automatically generate the new path/url everywhere they appear. You will
-learn more about these helper methods and their uses later.
-
-You may notice that some of the routes seem to be missing prefixes. This is
-because prefixes are based on a route's **path**, not its **verb**. All routes
-with the same path will share the same prefix, meaning that a prefix does not
-need to be listed more than once for any given path. So, e.g., the `index`
-route--a `GET` request to `users/`--and the `create` route--a `POST` request to
-`users/`--will both have the prefix `users`, even though the prefix only appears
-next to the `index` route.
-
-The ease with which Rails converts that one `resources` line into eight routes
-might seem like magic, but you can do it too. Try the following:
-
-- Comment out the `resources :users` line.
-- Write out the eight routes using the route 'matching' syntax. For example:
-  `get 'users/:id', to: 'users#show', as: 'user'`.
-
-Run `rails routes` again and check that the routes you've written match the
-routes generated by the `resources` helper exactly. __N.B.__: you'll probably
-see some differences in the prefixes listed for your routes. Again, try to match
-the `resources` output exactly. You can add a prefix to a route by using the
-`as` option. For example: `get 'users/new', to: 'users#new', as: 'new_user'`.
-Remember, too, that you don't need to specify a prefix more than once for any
-given **path**.
-
-What do these routes actually do? Starting your Rails server creates an instance
-of a _router_. This router holds instances of the _routes_ that are defined in
-your __routes.rb__ file. When a request comes in, the router tries to match a
-route based on the **HTTP method** and the **URL path**. (It does this with a
-_regular expression_, if you know what that is already.) The **first** matched
-route then instantiates an instance of the specified controller and calls the
-specified action on it.
-
-You now have the initial routes and endpoints necessary to manage a `User`
-resource. Notice, though, that your routes point to a `UsersController`, which
-you don't actually have yet. Nor do you have a `User` model. You'll add the
-model later. (Soon!)
-
-Next up: the controller!
-
-[diagram]: https://assets.aaonline.io/fullstack/rails/assets/rails_diagram.png
+[bcrypt-documentation]: https://github.com/codahale/bcrypt-ruby
+[callback]: https://guides.rubyonrails.org/active_record_callbacks.html#available-callbacks

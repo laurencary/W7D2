@@ -10,13 +10,14 @@
   </head>
 
   <body>
-    <h1>Music App</h1>
+    <h1>Bandz Make Her Dance</h1>
     <header>
       <% if current_user.nil? %>
-        <a href="<%= new_user_url %>">Sign Up</a>
-        <a href="<%= new_session_url %>">Log In</a>
+        <a class="button_link" href="<%= new_user_url %>">Sign Up</a>
+        <a class="button_link" href="<%= new_session_url %>">Log In</a>
       <% else %>  
         <form action="<%= session_url %>" method="POST">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
           <input type="hidden" name="_method" value="DELETE">
           <input type="submit" value="Logout">
         </form>

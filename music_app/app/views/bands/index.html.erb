@@ -2,10 +2,10 @@
 
 <ul>
     <% @bands.each do |band| %>
-        <li><%= render 'band', band: band %></li>
+        <li><a href="<%= band_url(band) %>"><%= render 'band', band: band %></a></li>
     <% end %>
 
 </ul>
 
 <br>
-<a href="<%= new_band_url %>">Add Band</a>
+<a class="button_link" href="<%= new_band_url %>">Add Band</a>

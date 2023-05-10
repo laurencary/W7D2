@@ -4,7 +4,10 @@ Rails.application.routes.draw do
     # Defines the root path route ("/")
     # root "articles#index"
     resources :users, only: [:new, :create, :show]
-    resources :bands
+    resources :bands do
+      resources :albums, only: [:new]
+    end
+    resources :albums, except: [:new, :index]
 
     resource :session, only: [:new, :create, :destroy]
 end

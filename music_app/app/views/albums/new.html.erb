@@ -1,0 +1,12 @@
+<h2>Add New Album</h2>
+
+<% if flash[:errors] %>
+    <%= flash[:errors] %> 
+<% end %>
+
+<form action="<%= albums_url %>" method="POST">
+    <label for="band">Band</label>
+    <select name="album[band]" id=""></select>
+
+
+</form>
